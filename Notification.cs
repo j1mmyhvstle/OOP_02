@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,9 +26,9 @@ namespace Do_an_nhom
         {
             return !(a == b);
         }
-        public void ShowNotification()
+        public override string ToString()
         {
-            Console.WriteLine($"Thông báo: {Message} vào lúc {Time}");
+            return $"Thông báo: {Message} vào lúc {Time}";
         }
 
         public void SaveNotification(Notification newNotification, string filePath)
@@ -56,8 +56,6 @@ namespace Do_an_nhom
             {
                 Console.WriteLine("Thông báo này đã tồn tại.");
             }
-            List<Notification> notifications = new List<Notification> { this };
-            SerializationHelper.Serialize(notifications, filePath);
         }
     }
 }
