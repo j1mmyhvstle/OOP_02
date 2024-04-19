@@ -504,7 +504,7 @@ internal class Program
                         }
                         break;
                     }
-                case "6":
+ case "6":
                     {
                         if (Username == "Admin") // quản lý
                         {
@@ -517,10 +517,6 @@ internal class Program
                                 {
                                     List<Notification> notifications = new List<Notification>();
                                     SerializationHelper.Deserialize(notifications, filePath_Noti);
-                                    foreach (Notification notification in notifications)
-                                    {
-                                        notification.ShowNotification();
-                                    }
                                     break;
                                 }
                                 case "2":
